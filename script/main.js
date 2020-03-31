@@ -35,7 +35,6 @@ function send_AdminMessage(text_array) {
 }
 
 
-
 // EVENTS
 add_button.addEventListener('click',
     function() {
