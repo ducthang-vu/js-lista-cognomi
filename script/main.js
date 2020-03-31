@@ -74,7 +74,7 @@ new_list_button.addEventListener('click',
 
         // Building table
         for (i = 0; i < surnames.length; i++) {
-           new_content += '<tr><td>' + (++surnames.indexOf(surnames[i]) + 1) + '</td><td>'  + surnames[i] + '</td></tr>'
+           new_content += '<tr><td>' + (surnames.indexOf(surnames[i]) + 1) + '</td><td>'  + surnames[i] + '</td></tr>'
         }
         table_body.innerHTML = new_content
 
