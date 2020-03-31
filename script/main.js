@@ -20,7 +20,7 @@ function formatting_surnames(text) {
 
 
 function send_AdminMessage(text_array) {
-    // A fuction accepting an array ['error', 'success', or 'normal', text], and printing the text on #admin-msg element, and applying relevant class
+    // A fuction accepting an array [('error' || 'success' || 'normal'), text], and printing the text on #admin-msg element, and applying relevant class
 
     if (text_array[0] == 'error') {
         message.className = ' red-color'
