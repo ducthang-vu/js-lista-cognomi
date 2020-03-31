@@ -14,7 +14,7 @@ var message = document.getElementById('admin-msg')
 
 // FUNCTIONS
 function formatting_surnames(text) {
-    // A function accepting a string, and returning the same string, the first letter being capitalized and the others unmodified. Return -1 if: input type is number or empty.
+    // A function accepting a string, and returning the same string, the first letter being capitalized and the others unmodified. Return -1 if: input is of type number, or empty.
 
     if ((text) && isNaN(text)) {
         return text.charAt(0).toUpperCase() + text.slice(1)
