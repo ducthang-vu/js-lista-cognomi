@@ -105,11 +105,12 @@ get_index_button.addEventListener('click',
         var user_input = document.getElementById('new-surname').value.trim()
         var text_to_user = []
 
-        if (surnames.indexOf(user_input) >= 0) {
-            text_to_user = ['normal', '"' + user_input + '" is a surname with index-value: ' + surnames.indexOf(user_input) +'.']
+        var surname = formatting_surnames(user_input)
+        if (surnames.indexOf(surname) >= 0) {
+            text_to_user = ['normal', '"' + surname + '" is a surname with index-value: ' + surnames.indexOf(surname) +'.']
         }
         else {
-            text_to_user = ['error', '"' + user_input + '" not found, try again or add a new surname.']
+            text_to_user = ['error', '"' + surname + '" not found, try again or add a new surname.']
         }
 
 
