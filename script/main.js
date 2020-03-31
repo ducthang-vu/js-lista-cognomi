@@ -8,6 +8,7 @@ console.log('main.js is working')
 var surnames = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
 var add_button = document.getElementById('add-button')
 var new_list_button = document.getElementById('new-list-button')
+var get_index_button = document.getElementById('index-button')
 var table_body =  document.getElementById('table-body')
 var message = document.getElementById('admin-msg')
 
@@ -86,5 +87,23 @@ new_list_button.addEventListener('click',
 
         // Message to user
         send_AdminMessage(['success', 'List created. You can add new surnames and create a new list.'])
+    }
+)
+
+
+get_index_button.addEventListener('click', 
+    function() {
+        /* A fuction returning index position of surname in the list*/
+        var user_input = document.getElementById('new-surname').value.trim()
+        var text_to_user = []
+
+        if (surnames.indexOf(user_input) >= 0) {
+            text_to_user = ['normal', '"' + user_input + '" is a surname with index-value: ' + surnames.indexOf(user_input) +', being 0 the first position.']
+        }
+        else {
+            text_to_user = ['error', 'Surname not found, try again or add and create a new list']
+        }
+
+        send_AdminMessage(text_to_user)
     }
 )

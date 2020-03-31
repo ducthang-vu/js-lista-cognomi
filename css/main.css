@@ -82,6 +82,10 @@ main > * {
     padding: 5px 10px;
 }
 
+.button-section {
+    justify-content: center;
+}
+
 .admin-box {
     margin: 20px 0 0 0;
     padding-left: 10px;

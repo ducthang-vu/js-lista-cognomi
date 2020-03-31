@@ -13,7 +13,9 @@
             <h1>Create an ordered list of surnames</h1>
             <p class="small-test">Enter a new surname in the input box and press the "Add to list" button.</br> 
             The first letter shall be automatically converted to uppercase.</br>
-            Press "Create new list" to create the list. </p>
+            Press "Create new list" to create the list.</br>
+            After creating the list you can get the index number of a surname using the input box and the "Get index" button.
+             </p>
         </header>
 
         <main class="flex-w">
@@ -22,7 +24,10 @@
                     <label for="new-surname">New surname: </label>
                     <input id="new-surname" type="text" placeholder="New surname here">
                 </div>
-                <button id="add-button" class="button central">Add to list</button>
+                <div class="button-section flex-w">
+                    <button id="add-button" class="button central">Add to list</button>
+                    <button id="index-button" class="button central">Get index</button>
+                </div>
                 <div class="admin-box small-text">
                     <h4>Console</h4>
                     <div>
