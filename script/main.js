@@ -64,6 +64,7 @@ function resetting_input_with_focus(input_element) {
 
 
 // ON PAGE LOAD
+surnames.sort()
 building_table_orderItem(surnames, table_body)
 
 
