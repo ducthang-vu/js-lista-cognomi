@@ -14,8 +14,14 @@ var message = document.getElementById('admin-msg')
 
 // FUNCTIONS
 function formatting_surnames(text) {
-    // A function accepting a string, and returning the same string, the first letter being capitalized and the others unmodified.
-    return text.charAt(0).toUpperCase() + text.slice(1)
+    // A function accepting a string, and returning the same string, the first letter being capitalized and the others unmodified. Return -1 if string if: input type is number or empty.
+
+    if ((text) && isNaN(text)) {
+        return text.charAt(0).toUpperCase() + text.slice(1)
+    }
+    else {
+        return -1
+    }
 }
 
 
@@ -39,19 +45,19 @@ function send_AdminMessage(text_array) {
 add_button.addEventListener('click',
     function() {
         var user_input = document.getElementById('new-surname').value.trim()
-        var new_surname 
         var text_to_user = []
 
-        if ((user_input) && isNaN(user_input)) {
-            new_surname = formatting_surnames(user_input)
+        var new_surname = formatting_surnames(user_input)
+        
+        if (new_surname != -1) {
             surnames.push(new_surname)
 
             text_to_user = ['success', '"' + new_surname + '" added. You can add a new surname.']
         }
-
         else {
             text_to_user = ['error', 'You cannot enter an empty string or a number. You can add a new surname.']
         }
+
 
         // Message to user
         send_AdminMessage( text_to_user)
