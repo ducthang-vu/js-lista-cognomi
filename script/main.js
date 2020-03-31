@@ -5,7 +5,7 @@
 
 console.log('main.js is working')
 
-var surnames = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
+var surnames = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi'].sort()
 var add_button = document.getElementById('add-button')
 var new_list_button = document.getElementById('new-list-button')
 var get_index_button = document.getElementById('index-button')
@@ -64,7 +64,6 @@ function resetting_input_with_focus(input_element) {
 
 
 // ON PAGE LOAD
-surnames.sort()
 building_table_orderItem(surnames, table_body)
 
 
