@@ -14,7 +14,7 @@ var message = document.getElementById('admin-msg')
 
 // FUNCTIONS
 function formatting_surnames(text) {
-    // A function accepting a string, and returning a string with the first letter capitalized and others unmodified.
+    // A function accepting a string, and returning the same string, the first letter being capitalized and the others unmodified.
     return text.charAt(0).toUpperCase() + text.slice(1)
 }
 
