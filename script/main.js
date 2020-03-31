@@ -1,5 +1,5 @@
 /* 
- A script accepting multiple strings by user, adding them to an existing list of strings, and printing all element of the list alphabetically; provided that the first letter of sush strings is uppercase or corrected to uppercase. 
+ A script accepting multiple strings by user, adding them to an existing list of strings, and printing all elements of the list alphabetically; provided that the first letter of sush strings is uppercase or corrected to uppercase. 
  */
 
 
