@@ -9,17 +9,28 @@ var surnames = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
 var add_button = document.getElementById('add-button')
 var new_list_button = document.getElementById('new-list-button')
 var table_body =  document.getElementById('table-body')
+var message = document.getElementById('admin-msg')
+
 
 
 add_button.addEventListener('click',
     function() {
         var user_input = document.getElementById('new-surname').value
+        var new_surname 
 
-        if (user_input) {
-            surnames.push(user_input.charAt(0).toUpperCase() + user_input.slice(1))
+        if (user_input || isNaN(user_imput)) {
+            new_surname = user_input.charAt(0).toUpperCase() + user_input.slice(1)
+            surnames.push(new_surname)
+            message.innerHTML = '"' + new_surname + '" added. You can add a new surname.'
+            message.className = ' green-color'
         }
-        else 
-            console.log('You cannot enter a empty string')
+
+        else {
+            console.log('You cannot enter a empty string. You can add a new surname.')
+            message.className = ' red-color'
+            message.innerHTML = 'You cannot enter a empty string. You can add a new surname.'
+        }
+
 
         // resetting form-box
         document.getElementById('new-surname').value = ''
@@ -42,11 +53,14 @@ new_list_button.addEventListener('click',
         console.log(output)
 
         var new_content = ''
-        
+
         for (i = 0; i < output.length; i++) {
            new_content += '<tr><td>' + output[i][0] + '</td><td>'  + output[i][1] + '</td></tr>'
         }
 
         table_body.innerHTML = new_content
+
+        message.innerHTML = 'List created. You can add new surnames and create a new list.'
+        message.className = ' green-text'
     }
 )

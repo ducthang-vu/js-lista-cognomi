@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="app">
-        <header>
+    <div class="app central">
+        <header class="text-center">
             <h1>Create an ordered list of surnames</h1>
+            <p class="small-test">Enter a new surname in the input box and press the "Add to list" button.</br> 
+            The first letter shall be automatically converted to uppercase.</br>
+            Press "Create new list" to create the list. </p>
+
         </header>
         <main class="flex-w">
             <div class="form-wrapper">
@@ -19,12 +23,15 @@
                     <input id="new-surname" type="text" placeholder="Write surname you want to add">
                 </div>
                 <button id="add-button" class="button central">Add to list</button>
-                <div class="admin-box">
-                    <span id="admin-msg"></span>
+                <div class="admin-box small-test">
+                    <h4>Console</h4>
+                    <div>
+                        <span id="admin-msg">Program ready</span>
+                    </div>
                 </div>
             </div>
             <div class="new-list-box">
-                <button id="new-list-button" class="button">Create new list</button>
+                <button id="new-list-button" class="button central">Create new list</button>
                 <table>
                     <thead>
                         <caption>Surnames, ordered alphabetically</caption>
@@ -35,8 +42,8 @@
                     </thead>
                     <tbody id="table-body">
                         <tr>
-                            <td>a</td>
-                            <td>b</td>
+                            <td>...</td>
+                            <td>...</td>
                         </tr>
                     </tbody>
                 </table>
