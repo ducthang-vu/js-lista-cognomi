@@ -64,7 +64,7 @@ add_button.addEventListener('click',
 
         // resetting form-box
         document.getElementById('new-surname').value = ''
-        document.getElementById('new-surname').focus
+        document.getElementById('new-surname').focus()
     }
 )
 
