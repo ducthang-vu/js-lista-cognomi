@@ -30,7 +30,7 @@ function building_table_orderItem(array, table) {
 function formatting_surnames(text) {
     // A function accepting a string, and returning the same string, the first letter being capitalized and the others unmodified. Return -1 if: input is of type number, or empty.
     if ((text) && isNaN(text)) {
-        return text.charAt(0).toUpperCase() + text.slice(1)
+        return text.trim().charAt(0).toUpperCase() + text.trim().slice(1)
     }
     else {
         return -1
@@ -72,7 +72,7 @@ building_table_orderItem(surnames, table_body)
 // EVENTS
 add_button.addEventListener('click',
     function() {
-        var user_input = document.getElementById('new-surname').value.trim()
+        var user_input = document.getElementById('new-surname').value
         var text_to_user = []
         
 
@@ -81,10 +81,8 @@ add_button.addEventListener('click',
         if (new_surname != -1) {
             surnames.push(new_surname)
 
-            // Sorting alphabetically all surnames 
-            surnames.sort()
-
-            // Builting table
+            // Sorting alphabetically all surnames, and build new table
+            surnames.sort()            
             building_table_orderItem(surnames, table_body)
 
             text_to_user = ['success', '"' + new_surname + '" added in index-position: ' + surnames.indexOf(new_surname) +'. You can add a new surname, or look for the index position of any surname']
