@@ -53,6 +53,7 @@ function send_AdminMessage(text_array) {
     console.table(text_array)
 }
 
+
 function resetting_input_with_focus(input_element) {
     // A fuction accepting a input element and assigning value: '', and giving focuc on said input
     document.getElementById(input_element).value = ''
@@ -61,8 +62,11 @@ function resetting_input_with_focus(input_element) {
 
 
 
+
 // ON PAGE LOAD
 building_table_orderItem(surnames, table_body)
+
+
 
 
 // EVENTS
