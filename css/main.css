@@ -14,3 +14,68 @@ button:focus {
     outline: none;
     cursor: pointer;
 }
+
+
+/* UTILITIES */
+.button {
+    display: block;
+    padding: 10px;
+}
+
+.flex-w {
+    display: flex;
+    flex: wrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.central {
+    margin: auto;
+}
+
+
+/* APP */
+.app {
+    width: 1000px;
+    max-width: 90%;
+}
+/* MAIN */
+main {
+    padding: 10px;
+    width: 100%;
+}
+
+main * {
+    margin: 10px;
+}
+
+/* Main: FORM-BOX */
+.form-wrapper {
+    padding: 10px;
+    flex-basis: 40%;
+    border: 2px solid #000;
+}
+
+.form-wrapper .form-box {
+    margin-bottom: 10px;
+    justify-content: center;  
+}
+
+.form-wrapper .form-box * {
+    padding: 5px 10px;
+}
+
+/* Main: NEW-LIST-BOX*/
+.new-list-box {
+    flex-basis: 60%;
+}
+
+.new-list-box table tr:first-child {
+    width: 15px;
+}
+
+.new-list-box table tr:last-child {
+    width: 60px;
+}   
