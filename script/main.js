@@ -8,13 +8,15 @@ console.log('main.js is working')
 var surnames = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
 var add_button = document.getElementById('add-button')
 var new_list_button = document.getElementById('new-list-button')
+var table_body =  document.getElementById('table-body')
+
 
 add_button.addEventListener('click',
     function() {
         var user_input = document.getElementById('new-surname').value
+
         if (user_input) {
-            new_surname = user_input.charAt(0).toUpperCase() + user_input.slice(1)
-            surnames.push(new_surname)
+            surnames.push(user_input.charAt(0).toUpperCase() + user_input.slice(1))
         }
         else 
             console.log('You cannot enter a empty string')
@@ -24,6 +26,7 @@ add_button.addEventListener('click',
         document.getElementById('new-surname').focus
     }
 )
+
 
 new_list_button.addEventListener('click', 
     function() {
@@ -35,6 +38,15 @@ new_list_button.addEventListener('click',
             output[i] = [(i + 1), surnames[i]]
         }
 
+
         console.log(output)
+
+        var new_content = ''
+        
+        for (i = 0; i < output.length; i++) {
+           new_content += '<tr><td>' + output[i][0] + '</td><td>'  + output[i][1] + '</td></tr>'
+        }
+
+        table_body.innerHTML = new_content
     }
 )
