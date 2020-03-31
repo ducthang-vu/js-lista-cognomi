@@ -67,18 +67,14 @@ add_button.addEventListener('click',
 new_list_button.addEventListener('click', 
     function() {
         /* A fuction sorting alphabetically all surnames and associating each of them with its ordinal number, and for builting a table and sending message to user */
-        var output = []
         var new_content = ''
 
-        // Sorting alphabetically all surnames and associating each of them with its ordinal number
+        // Sorting alphabetically all surnames 
         surnames.sort()
-        for (i = 0; i < surnames.length; i++) {
-            output[i] = [(i + 1), surnames[i]]
-        }
 
         // Building table
-        for (i = 0; i < output.length; i++) {
-           new_content += '<tr><td>' + output[i][0] + '</td><td>'  + output[i][1] + '</td></tr>'
+        for (i = 0; i < surnames.length; i++) {
+           new_content += '<tr><td>' + (++surnames.indexOf(surnames[i]) + 1) + '</td><td>'  + surnames[i] + '</td></tr>'
         }
         table_body.innerHTML = new_content
 
