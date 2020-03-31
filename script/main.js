@@ -5,6 +5,7 @@
 
 console.log('main.js is working')
 
+// global variables
 var surnames = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
 var add_button = document.getElementById('add-button')
 var new_list_button = document.getElementById('new-list-button')
@@ -12,10 +13,13 @@ var table_body =  document.getElementById('table-body')
 var message = document.getElementById('admin-msg')
 
 
+// FUNCTIONS
+
+
 
 add_button.addEventListener('click',
     function() {
-        var user_input = document.getElementById('new-surname').value
+        var user_input = document.getElementById('new-surname').value.trim()
         var new_surname 
 
         if ((user_input) && isNaN(user_input)) {
