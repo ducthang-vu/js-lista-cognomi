@@ -18,7 +18,7 @@ add_button.addEventListener('click',
         var user_input = document.getElementById('new-surname').value
         var new_surname 
 
-        if (user_input || isNaN(user_imput)) {
+        if ((user_input) && isNaN(user_input)) {
             new_surname = user_input.charAt(0).toUpperCase() + user_input.slice(1)
             surnames.push(new_surname)
             message.innerHTML = '"' + new_surname + '" added. You can add a new surname.'
@@ -26,9 +26,8 @@ add_button.addEventListener('click',
         }
 
         else {
-            console.log('You cannot enter a empty string. You can add a new surname.')
             message.className = ' red-color'
-            message.innerHTML = 'You cannot enter a empty string. You can add a new surname.'
+            message.innerHTML = 'You cannot enter a empty string or a number. You can add a new surname.'
         }
 
 
@@ -48,9 +47,6 @@ new_list_button.addEventListener('click',
         for (i = 0; i < surnames.length; i++) {
             output[i] = [(i + 1), surnames[i]]
         }
-
-
-        console.log(output)
 
         var new_content = ''
 
