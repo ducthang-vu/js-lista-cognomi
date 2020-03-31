@@ -16,7 +16,7 @@ var message = document.getElementById('admin-msg')
 
 // FUNCTIONS
 function building_table_orderItem(array, table) {
-    // A function accepting an array and a element table, and building 2-cells rows (index-position, item) from the array
+    // A function accepting an array and a element table-body, and building 2-cells rows (index-position, item) from the array
 
     var new_content = ''
     for (i = 0; i < array.length; i++) {
