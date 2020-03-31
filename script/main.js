@@ -96,6 +96,7 @@ add_button.addEventListener('click',
     }
 )
 
+
 get_index_button.addEventListener('click', 
     function() {
         /* A fuction returning index position of surname in the list*/
