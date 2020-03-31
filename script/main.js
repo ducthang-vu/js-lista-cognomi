@@ -5,3 +5,5 @@
 
 
 console.log('main.js is working')
+
+var surnames = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi']
