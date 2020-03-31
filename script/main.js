@@ -10,15 +10,19 @@ var add_button = document.getElementById('add-button')
 var new_list_button = document.getElementById('new-list-button')
 
 add_button.addEventListener('click',
- function() {
-    var user_input = document.getElementById('new-surname').value
-    new_surname = user_input.charAt(0).toUpperCase() + user_input.slice(1)
-    surnames.push(new_surname)
+    function() {
+        var user_input = document.getElementById('new-surname').value
+        if (user_input) {
+            new_surname = user_input.charAt(0).toUpperCase() + user_input.slice(1)
+            surnames.push(new_surname)
+        }
+        else 
+            console.log('You cannot enter a empty string')
 
-    // resetting form-box
-    user_input = ''
-    document.getElementById('new-surname').focus
- }
+        // resetting form-box
+        document.getElementById('new-surname').value = ''
+        document.getElementById('new-surname').focus
+    }
 )
 
 new_list_button.addEventListener('click', 
