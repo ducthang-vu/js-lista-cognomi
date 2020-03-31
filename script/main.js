@@ -50,7 +50,7 @@ add_button.addEventListener('click',
         }
 
         else {
-            text_to_user = ['error', 'You cannot enter a empty string or a number. You can add a new surname.']
+            text_to_user = ['error', 'You cannot enter an empty string or a number. You can add a new surname.']
         }
 
         // Message to user
