@@ -47,6 +47,7 @@ add_button.addEventListener('click',
         var user_input = document.getElementById('new-surname').value.trim()
         var text_to_user = []
 
+        // formatting surname adding to list "surnames" if correct
         var new_surname = formatting_surnames(user_input)
 
         if (new_surname != -1) {
