@@ -102,7 +102,7 @@ add_button.addEventListener('click',
 get_index_button.addEventListener('click', 
     function() {
         /* A fuction returning index position of surname in the list*/
-        var user_input = document.getElementById('new-surname').value.trim()
+        var user_input = document.getElementById('new-surname').value
         var text_to_user = []
 
         var surname = formatting_surnames(user_input)
