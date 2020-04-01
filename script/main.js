@@ -88,7 +88,7 @@ add_button.addEventListener('click',
             text_to_user = ['success', '"' + new_surname + '" added in index-position: ' + surnames.indexOf(new_surname) +'. You can add a new surname, or look for the index position of any surname']
         }
         else {
-            text_to_user = ['error', 'You cannot enter an empty string or a number. You can add a new surname, or look for the index position of any surname']
+            text_to_user = ['error', 'You cannot enter an empty string or a number. You can add a new surname, or look for the index position of any surname.']
         }
 
 
