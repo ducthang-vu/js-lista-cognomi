@@ -27,7 +27,7 @@ function building_table_orderItem(array, table) {
 
 
 function formatting_surnames(text) {
-    // A function accepting a string, and returning the same string, the first letter being capitalized and the others unmodified. Return -1 if: input is of type number, or empty.
+    // A function accepting a string, and returning the same string stripped of empty spaces on both sides, the first letter being capitalized and the others unmodified. Return -1 if: input is of type number, or empty.
     if ((text) && isNaN(text)) {
         return text.trim().charAt(0).toUpperCase() + text.trim().slice(1)
     }
