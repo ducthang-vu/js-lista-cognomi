@@ -109,7 +109,7 @@ get_index_button.addEventListener('click',
             text_to_user = ['normal', '"' + surname + '" is a surname with index-value: ' + surnames.indexOf(surname) +'.']
         }
         else {
-            text_to_user = ['error', '"' + surname + '" not found, try again or add a new surname.']
+            text_to_user = ['error', '"' + user_input.trim() + '" not found, try again or add a new surname.']
         }
 
 
